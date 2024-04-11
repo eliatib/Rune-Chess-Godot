@@ -1,0 +1,147 @@
+[gd_scene load_steps=13 format=3 uid="uid://7h8tqu2ce5ul"]
+
+[ext_resource type="Script" path="res://Scripts/Game.gd" id="1_vgwod"]
+[ext_resource type="Script" path="res://Scripts/Board.gd" id="2_kmm15"]
+[ext_resource type="Texture2D" uid="uid://qfe62hvpo71e" path="res://Textures/Runes/rupee.png" id="3_i6ddd"]
+[ext_resource type="Texture2D" uid="uid://chrqgy3loof3m" path="res://Textures/Runes/rupee_click.png" id="4_2bvn7"]
+[ext_resource type="Texture2D" uid="uid://cdk2a5pr6xrpg" path="res://Textures/Runes/rupee_hover.png" id="5_evdct"]
+[ext_resource type="Texture2D" uid="uid://db6mfvbrg4cys" path="res://Textures/Runes/rupee_disable.png" id="6_ej03b"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_07.gd" id="7_ihn7m"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_08.gd" id="8_apu1n"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_09.gd" id="9_2wu36"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_04.gd" id="10_ulmwv"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_05.gd" id="11_2o1j4"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_06.gd" id="12_bisb0"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vgwod")
+
+[node name="Board" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 8
+script = ExtResource("2_kmm15")
+
+[node name="WinPanel" type="Control" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="WinPanel"]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.458824, 0.458824, 0.458824, 0.780392)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="WinPanel/ColorRect"]
+use_parent_material = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+bbcode_enabled = true
+fit_content = true
+
+[node name="WR_Container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 10.0
+offset_right = 170.0
+offset_bottom = 110.0
+grow_horizontal = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="WR_Container"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+texture_pressed = ExtResource("4_2bvn7")
+texture_hover = ExtResource("5_evdct")
+texture_disabled = ExtResource("6_ej03b")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("7_ihn7m")
+
+[node name="TextureButton2" type="TextureButton" parent="WR_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_apu1n")
+
+[node name="TextureButton3" type="TextureButton" parent="WR_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("9_2wu36")
+
+[node name="BR_Container" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -170.0
+offset_top = -110.0
+offset_right = 170.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="BR_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("10_ulmwv")
+
+[node name="TextureButton2" type="TextureButton" parent="BR_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("11_2o1j4")
+
+[node name="TextureButton3" type="TextureButton" parent="BR_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_i6ddd")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("12_bisb0")

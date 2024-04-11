@@ -1,0 +1,205 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwp70uc6d7wns"]
+
+[ext_resource type="Script" path="res://Scripts/select_rune/RuneMenu.gd" id="1_m8t42"]
+[ext_resource type="Texture2D" uid="uid://qfe62hvpo71e" path="res://Textures/Runes/rupee.png" id="2_rtsn7"]
+[ext_resource type="Texture2D" uid="uid://chrqgy3loof3m" path="res://Textures/Runes/rupee_click.png" id="3_nvrnn"]
+[ext_resource type="Texture2D" uid="uid://cdk2a5pr6xrpg" path="res://Textures/Runes/rupee_hover.png" id="4_uosyd"]
+[ext_resource type="Texture2D" uid="uid://db6mfvbrg4cys" path="res://Textures/Runes/rupee_disable.png" id="5_k3i1r"]
+[ext_resource type="Script" path="res://Scripts/select_rune/RDD.gd" id="6_mx570"]
+[ext_resource type="Script" path="res://Scripts/select_rune/RSelect.gd" id="7_2k28s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m8t42")
+
+[node name="R_Container" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 50.0
+offset_bottom = 358.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="R_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="R_Container/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="R_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="R_Container/HBoxContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer2"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="R_Container"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="R_Container/HBoxContainer3"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer3"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer3"]
+clip_contents = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_rtsn7")
+texture_pressed = ExtResource("3_nvrnn")
+texture_hover = ExtResource("4_uosyd")
+texture_disabled = ExtResource("5_k3i1r")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("6_mx570")
+
+[node name="choose_runes" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -154.0
+offset_top = -270.0
+offset_right = 154.0
+offset_bottom = -170.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="choose_runes"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+border_width = 1.5
+editor_only = false
+script = ExtResource("7_2k28s")
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="choose_runes"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+border_width = 1.5
+editor_only = false
+script = ExtResource("7_2k28s")
+
+[node name="ReferenceRect3" type="ReferenceRect" parent="choose_runes"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+border_width = 1.5
+editor_only = false
+script = ExtResource("7_2k28s")
+
+[node name="Validate" type="Button" parent="."]
+custom_minimum_size = Vector2(150, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -130.0
+offset_right = 75.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "VALIDATE"
+
+[connection signal="pressed" from="Validate" to="." method="_on_validate_pressed"]
