@@ -1,6 +1,13 @@
 extends Rune
+class_name Rune_08
 
 var step = 0
+
+func _ready():
+	super._ready()
+	modulate = Color(0.6,0.6,0.3)
+	description = "En jouant un fou, si celui-ci mange une pièce il peux rejouer, mais il ne peut pas manger une autre pièce"
+	
 
 func _activate_rune():
 	if !global.rune_played:

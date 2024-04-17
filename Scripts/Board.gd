@@ -14,7 +14,15 @@ func _ready():
 	var pieces := get_tree().get_nodes_in_group("pieces")
 	for piece in pieces:
 		piece._set_piece()
-
+	var w_runes = get_tree().root.get_node("Control/WR_Container")
+	for path in global.runes_w:
+		var rune = load(path).new()
+		w_runes.add_child(rune)
+	var b_runes = get_tree().root.get_node("Control/BR_Container")
+	for path in global.runes_b:
+		var rune = load(path).new()
+		b_runes.add_child(rune)
+	
 func _create_board():
 	for y in range(0,board_size.y,1):
 		for x in range(0,board_size.x,1):

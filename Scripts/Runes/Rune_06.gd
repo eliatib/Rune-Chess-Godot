@@ -1,9 +1,16 @@
 extends Rune
+class_name Rune_06
 
 var moves : Array
 var step = 0
 var selectpiece : Pawn
 var king : King
+
+func _ready():
+	super._ready()
+	modulate = Color(0.3,0.3,0.6)
+	description = "perrmet de sélectionner une de ses pièce pour la téléporter à coté de son roi"
+	
 
 func _activate_rune():
 	var board: Board = get_tree().root.get_node("Control/Board")

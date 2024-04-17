@@ -1,5 +1,11 @@
 extends Rune
+class_name Rune_05
 
+func _ready():
+	super._ready()
+	modulate = Color(0.3,0.6,0.3)
+	description = "permet à un pion de bouger dans n'importe quel direction"
+	
 
 func _activate_rune():
 	if !global.rune_played:

@@ -1,7 +1,13 @@
 extends Rune
+class_name Rune_03
 
 var freeze_time = 2
 var freeze_cell : Cell
+
+func _ready():
+	super._ready()
+	modulate = Color(0.7,0.8,0.9)
+	description = "Gèle une pièce adverse qui ne peut pas jouer au prochain tour"
 
 func _activate_rune():
 	if !global.rune_played:

@@ -1,5 +1,12 @@
 extends Rune
+class_name Rune_07
 
+
+func _ready():
+	super._ready()
+	modulate = Color(0.6,0.3,0.6)
+	description = "Sacrifie une tour pour tuer toutes les 1er pièces qu'il rencontre sur chacun de ses axes de mouvement, y compris ses propres pièces"
+	
 func _activate_rune():
 	if !global.rune_played:
 			global.wait_rune = true
@@ -28,7 +35,8 @@ func _play_rune(cell: Cell):
 					var checkcell = board.get_node(str(y) + "-" + str(x))
 					if checkcell.has_node(NodePath(checkcell.name)):
 						var explodepiece = checkcell.get_node(NodePath(checkcell.name))
-						explodepiece.queue_free()
+						if explodepiece.type != 'k':
+							explodepiece.queue_free()
 						break
 					i += 1
 					x = piece.Current_X_Position + (i * right)

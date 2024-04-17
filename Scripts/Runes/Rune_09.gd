@@ -1,7 +1,14 @@
 extends Rune
+class_name Rune_09
 
 var movablePawns : Array
 var step = 0
+
+func _ready():
+	super._ready()
+	modulate = Color(0.3,0.6,0.6)
+	description = "Permet de bouger 2 de ses pion d'une case si ceci n'ont toujours pas été joué"
+	
 
 func _activate_rune():
 	var pieces := get_tree().get_nodes_in_group("pieces")

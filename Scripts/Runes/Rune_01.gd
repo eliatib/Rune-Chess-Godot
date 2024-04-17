@@ -1,5 +1,11 @@
 extends Rune
+class_name Rune_01
 
+func _ready():
+	super._ready()
+	modulate = Color(0.3,0,0)
+	description = "Fait apparaitre un pion sur une cas vide. Il ne peut pas bouger et disparait au prochain tour"
+	
 func _activate_rune():
 	if !global.rune_played:
 		global.wait_rune = true

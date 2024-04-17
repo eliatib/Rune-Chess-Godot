@@ -1,5 +1,10 @@
 extends Rune
+class_name Rune_02
 
+func _ready():
+	super._ready()
+	modulate = Color(0.3,0.3,0)
+	description = "Permet au cheval d'avancer de 3 case en ligne droite"
 
 func _activate_rune():
 	if !global.rune_played:

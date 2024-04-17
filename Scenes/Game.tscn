@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://7h8tqu2ce5ul"]
+[gd_scene load_steps=10 format=3 uid="uid://7h8tqu2ce5ul"]
 
 [ext_resource type="Script" path="res://Scripts/Game.gd" id="1_vgwod"]
 [ext_resource type="Script" path="res://Scripts/Board.gd" id="2_kmm15"]
@@ -9,9 +9,6 @@
 [ext_resource type="Script" path="res://Scripts/Runes/Rune_07.gd" id="7_ihn7m"]
 [ext_resource type="Script" path="res://Scripts/Runes/Rune_08.gd" id="8_apu1n"]
 [ext_resource type="Script" path="res://Scripts/Runes/Rune_09.gd" id="9_2wu36"]
-[ext_resource type="Script" path="res://Scripts/Runes/Rune_04.gd" id="10_ulmwv"]
-[ext_resource type="Script" path="res://Scripts/Runes/Rune_05.gd" id="11_2o1j4"]
-[ext_resource type="Script" path="res://Scripts/Runes/Rune_06.gd" id="12_bisb0"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -79,6 +76,7 @@ theme_override_constants/separation = 20
 alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="WR_Container"]
+visible = false
 clip_contents = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -91,6 +89,7 @@ stretch_mode = 0
 script = ExtResource("7_ihn7m")
 
 [node name="TextureButton2" type="TextureButton" parent="WR_Container"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_i6ddd")
@@ -99,6 +98,7 @@ stretch_mode = 0
 script = ExtResource("8_apu1n")
 
 [node name="TextureButton3" type="TextureButton" parent="WR_Container"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_i6ddd")
@@ -114,34 +114,41 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -170.0
-offset_top = -110.0
+offset_top = -120.0
 offset_right = 170.0
-offset_bottom = -10.0
+offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_constants/separation = 20
 alignment = 1
 
 [node name="TextureButton" type="TextureButton" parent="BR_Container"]
+visible = false
+clip_contents = true
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_i6ddd")
+texture_pressed = ExtResource("4_2bvn7")
+texture_hover = ExtResource("5_evdct")
+texture_disabled = ExtResource("6_ej03b")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("10_ulmwv")
+script = ExtResource("7_ihn7m")
 
 [node name="TextureButton2" type="TextureButton" parent="BR_Container"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_i6ddd")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("11_2o1j4")
+script = ExtResource("8_apu1n")
 
 [node name="TextureButton3" type="TextureButton" parent="BR_Container"]
+visible = false
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_i6ddd")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("12_bisb0")
+script = ExtResource("9_2wu36")

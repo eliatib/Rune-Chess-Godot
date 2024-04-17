@@ -1,12 +1,21 @@
-[gd_scene load_steps=8 format=3 uid="uid://cwp70uc6d7wns"]
+[gd_scene load_steps=17 format=3 uid="uid://cwp70uc6d7wns"]
 
 [ext_resource type="Script" path="res://Scripts/select_rune/RuneMenu.gd" id="1_m8t42"]
 [ext_resource type="Texture2D" uid="uid://qfe62hvpo71e" path="res://Textures/Runes/rupee.png" id="2_rtsn7"]
 [ext_resource type="Texture2D" uid="uid://chrqgy3loof3m" path="res://Textures/Runes/rupee_click.png" id="3_nvrnn"]
 [ext_resource type="Texture2D" uid="uid://cdk2a5pr6xrpg" path="res://Textures/Runes/rupee_hover.png" id="4_uosyd"]
 [ext_resource type="Texture2D" uid="uid://db6mfvbrg4cys" path="res://Textures/Runes/rupee_disable.png" id="5_k3i1r"]
-[ext_resource type="Script" path="res://Scripts/select_rune/RDD.gd" id="6_mx570"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_01.gd" id="6_0ol2a"]
 [ext_resource type="Script" path="res://Scripts/select_rune/RSelect.gd" id="7_2k28s"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_02.gd" id="7_3nq6y"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_03.gd" id="8_slgp8"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_04.gd" id="9_d16qf"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_05.gd" id="10_jxi7i"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_06.gd" id="11_hn8wx"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_07.gd" id="12_s6kf7"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_08.gd" id="13_0p8wl"]
+[ext_resource type="Script" path="res://Scripts/Runes/Rune_09.gd" id="14_gu2cm"]
+[ext_resource type="Script" path="res://Scripts/select_rune/Description.gd" id="15_ieotq"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -41,7 +50,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("6_0ol2a")
 
 [node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer"]
 clip_contents = true
@@ -53,7 +62,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("7_3nq6y")
 
 [node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer"]
 clip_contents = true
@@ -65,7 +74,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("8_slgp8")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="R_Container"]
 custom_minimum_size = Vector2(100, 100)
@@ -83,7 +92,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("9_d16qf")
 
 [node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer2"]
 clip_contents = true
@@ -95,7 +104,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("10_jxi7i")
 
 [node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer2"]
 clip_contents = true
@@ -107,7 +116,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("11_hn8wx")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="R_Container"]
 custom_minimum_size = Vector2(100, 100)
@@ -125,7 +134,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("12_s6kf7")
 
 [node name="TextureButton2" type="TextureButton" parent="R_Container/HBoxContainer3"]
 clip_contents = true
@@ -137,7 +146,7 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("13_0p8wl")
 
 [node name="TextureButton3" type="TextureButton" parent="R_Container/HBoxContainer3"]
 clip_contents = true
@@ -149,7 +158,17 @@ texture_hover = ExtResource("4_uosyd")
 texture_disabled = ExtResource("5_k3i1r")
 ignore_texture_size = true
 stretch_mode = 0
-script = ExtResource("6_mx570")
+script = ExtResource("14_gu2cm")
+
+[node name="Description" type="Label" parent="R_Container"]
+clip_contents = true
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_alignment = 1
+autowrap_mode = 1
+clip_text = true
+script = ExtResource("15_ieotq")
 
 [node name="choose_runes" type="HBoxContainer" parent="."]
 layout_mode = 1

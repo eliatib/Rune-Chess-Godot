@@ -1,6 +1,13 @@
 extends Rune
+class_name Rune_04
 
 var rune_time = 2
+	
+
+func _ready():
+	super._ready()
+	modulate = Color(0.6,0.3,0.3)
+	description = "Lors du prochain tour de l'adversaire, celui-ci ne pourrat bouger sa reine que d'une case"
 	
 func _activate_rune():
 	if !global.rune_played:
